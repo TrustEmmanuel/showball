@@ -1,0 +1,13 @@
+{
+  "name": "showball",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/main.js --bundle --format=iife --outfile=game.js",
+    "watch": "esbuild src/main.js --bundle --format=iife --outfile=game.js --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.10",
+    "three": "^0.170.0"
+  }
+}

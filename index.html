@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10241c">
+  <title>Showball</title>
+  <link rel="stylesheet" href="./css/game.css">
+</head>
+<body class="menu">
+  <canvas id="view"></canvas>
+
+  <header id="top">
+    <div id="who">
+      <img id="face" alt="" hidden>
+      <span id="mark" aria-hidden="true">G</span>
+      <div>
+        <strong id="pname">Guest</strong>
+        <span id="paccount">Not signed in</span>
+      </div>
+      <button id="signin" type="button">Sign in</button>
+    </div>
+    <div id="score" aria-live="polite">
+      <div><b id="juggles">0</b><span>Juggles</span></div>
+      <div><b id="goals">0</b><span>Goals</span></div>
+    </div>
+    <button id="mute" type="button" aria-pressed="false">Sound on</button>
+  </header>
+
+  <p id="pop" hidden></p>
+  <p id="mama"><span>Mama Kemi</span><em id="line" aria-live="polite">The flowers dey wait.</em></p>
+
+  <div id="actions">
+    <button id="kick" type="button">Kick</button>
+    <button id="finish" type="button" disabled>
+      Finish
+      <small id="finish-note">3 more</small>
+    </button>
+  </div>
+
+  <div id="overlay">
+    <div class="card">
+      <div id="panel-title">
+        <p class="kicker">Compound football</p>
+        <h1>Showball</h1>
+        <p id="lede">Keep am up. Then finish. The ball wants the hibiscus, and Mama Kemi is on the balcony.</p>
+        <p class="kit">Your bib, shorts, hair, hat and accessory are your start.ng character.</p>
+        <ul>
+          <li>Kick when the ring at your feet turns green.</li>
+          <li>Bad touches walk into the flowers.</li>
+          <li>After three, finish into the goal. A goal resets the drift.</li>
+        </ul>
+        <button id="play" class="go" type="button">Oya, play</button>
+        <button id="board-btn" class="ghost" type="button">Leaderboard</button>
+        <p id="title-board" hidden></p>
+        <p class="hint">Space to kick · F to finish</p>
+      </div>
+      <div id="panel-over" hidden>
+        <p class="kicker">Full time</p>
+        <h2 id="over-line">Flowers don collect am.</h2>
+        <p id="over-stat" class="stat">0 juggles · 0 goals</p>
+        <p id="rank-line"></p>
+        <p id="phone-best"></p>
+        <button id="again" class="go" type="button">Play again</button>
+        <ol id="board"></ol>
+        <p id="board-note"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="./game.js"></script>
+</body>
+</html>
